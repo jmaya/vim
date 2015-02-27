@@ -1,0 +1,54 @@
+[submodule "bundle/ag.vim.git"]
+	path = bundle/ag.vim.git
+	url = https://github.com/rking/ag.vim.git
+[submodule "bundle/csv.vim.git"]
+	path = bundle/csv.vim.git
+	url = https://github.com/chrisbra/csv.vim.git
+[submodule "bundle/ctrlp.vim.git"]
+	path = bundle/ctrlp.vim.git
+	url = https://github.com/kien/ctrlp.vim.git
+[submodule "bundle/nerdtree.git"]
+	path = bundle/nerdtree.git
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "bundle/tabular.git"]
+	path = bundle/tabular.git
+	url = https://github.com/godlygeek/tabular.git
+[submodule "bundle/vim-airline.git"]
+	path = bundle/vim-airline.git
+	url = https://github.com/bling/vim-airline.git
+[submodule "bundle/vim-bundler.git"]
+	path = bundle/vim-bundler.git
+	url = https://github.com/tpope/vim-bundler.git
+[submodule "bundle/vim-colors-solarized.git"]
+	path = bundle/vim-colors-solarized.git
+	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "bundle/vim-commentary.git"]
+	path = bundle/vim-commentary.git
+	url = https://github.com/tpope/vim-commentary.git
+[submodule "bundle/vim-dispatch.git"]
+	path = bundle/vim-dispatch.git
+	url = https://github.com/tpope/vim-dispatch.git
+[submodule "bundle/vim-endwise.git"]
+	path = bundle/vim-endwise.git
+	url = https://github.com/tpope/vim-endwise.git
+[submodule "bundle/vim-fugitive.git"]
+	path = bundle/vim-fugitive.git
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "bundle/vim-rails.git"]
+	path = bundle/vim-rails.git
+	url = https://github.com/tpope/vim-rails.git
+[submodule "bundle/vim-rake.git"]
+	path = bundle/vim-rake.git
+	url = https://github.com/tpope/vim-rake.git
+[submodule "bundle/vim-ruby.git"]
+	path = bundle/vim-ruby.git
+	url = https://github.com/vim-ruby/vim-ruby.git
+[submodule "bundle/vim-sensible.git"]
+	path = bundle/vim-sensible.git
+	url = https://github.com/tpope/vim-sensible.git
+[submodule "bundle/vim-snippets.git"]
+	path = bundle/vim-snippets.git
+	url = https://github.com/honza/vim-snippets.git
+[submodule "bundle/vim-unimpaired.git"]
+	path = bundle/vim-unimpaired.git
+	url = https://github.com/tpope/vim-unimpaired.git

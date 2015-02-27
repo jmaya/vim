@@ -1,0 +1,55 @@
+priority -50
+
+snippet afcontroller "angular controller" i
+(function() {
+    'use strict';
+
+    angular
+        .module('${1:moduleName}')
+        .controller('${2:NAME}', $2});
+        
+    $2.inject = ['${3:dependency}'];
+
+    /* @ngInject */
+    function $2($3) {
+        /* jshint validthis: true */
+        var vm = this;
+        
+        vm.activate = activate;
+        vm.title = '$2';
+
+        activate();
+        
+        ////////////////
+        
+        function activate() { }
+    }
+})();
+endsnippet
+
+snippet affactory "angular factory" i
+(function() {
+    'use strict';
+
+    angular
+        .module('${1:moduleName}')
+        .factory('${2:NAME}', $2);
+
+    $2.$inject = ['${3:dependency}'];
+
+    /* @ngInject */
+    function $2($3) {
+        var service = {
+            ${4:func}: $4
+        };
+
+        return service;
+        
+        ////////////////
+
+        function $4() { 
+				$0
+        }
+    }
+})();
+endsnippet
