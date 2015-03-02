@@ -52,3 +52,9 @@
 [submodule "bundle/vim-unimpaired.git"]
 	path = bundle/vim-unimpaired.git
 	url = https://github.com/tpope/vim-unimpaired.git
+[submodule "bundle/vim-rsi.git"]
+	path = bundle/vim-rsi.git
+	url = https://github.com/tpope/vim-rsi.git
+[submodule "bundle/neocomplete"]
+	path = bundle/neocomplete
+	url = https://github.com/Shougo/neocomplete.vim.git
