@@ -16,7 +16,12 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 
-map <Leader>rt :!ctags --tag-relative --extra=+f -Rf.git/tags --exclude=.git, pkg --languages=-javascript,-sql<CR><CR>
+set noswapfile
+set pastetoggle=<F2>
+
+" map <Leader>rt :!ctags --tag-relative --extra=+f -Rf.git/tags --exclude=.git, pkg --languages=-javascript,-sql<CR><CR>
+map <Leader>rt :!ctags -R .<CR><CR>
+set tags=./tags
 
 set ruler
 set laststatus=2
@@ -24,7 +29,7 @@ set laststatus=2
 set nocompatible
 set autoindent
 set showcmd
-set relativenumber
+" set relativenumber
 set suffixesadd=.rb
 set path+=lib/**,spec**
 let g:ruby_path = &path
@@ -50,7 +55,7 @@ else
   let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
   let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others']
 endif
-let g:ctrlp_map = '<Leader>t' 
+let g:ctrlp_map = '<Leader>t'
 nnoremap <silent> ,t :CtrlP<CR>
 nnoremap <silent> ,b :CtrlPBuffer<cr>
 let g:ctrlp_by_filename = 1
@@ -101,3 +106,30 @@ set hidden
 let g:LustyJugglerSuppressRubyWarning = 1
 let g:LustyJugglerAltTabMode = 1
 let g:LustyJugglerShowKeys = 'a' " show a/s/d/f keys
+
+" Tidy
+:vmap ,gt :!tidy -q -i --show-errors 0<CR>
+
+" persistent undos - undo after you re-open the file
+" but this gives warnings under command line vim
+" use only in macvim
+if v:version > '702'
+  set undodir=~/.vim/backups
+  set undofile
+endif
+
+" via: http://rails-bestpractices.com/posts/60-remove-trailing-whitespace
+" Strip trailing whitespace
+function! <SID>StripTrailingWhitespaces()
+    " Preparation: save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    %s/\s\+$//e
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
+command! StripTrailingWhitespaces call <SID>StripTrailingWhitespaces()
+nmap ,w :StripTrailingWhitespaces<CR>
